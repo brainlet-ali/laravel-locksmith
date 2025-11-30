@@ -1,0 +1,58 @@
+{
+    "name": "brainlet-ali/laravel-locksmith",
+    "description": "Secrets rotation orchestration for Laravel with zero-downtime grace periods.",
+    "keywords": [
+        "laravel",
+        "secrets",
+        "rotation",
+        "credentials",
+        "security",
+        "api-keys",
+        "encryption",
+        "zero-downtime"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ali",
+            "email": "brainlet.ali@gmail.com"
+        }
+    ],
+    "homepage": "https://github.com/brainlet-ali/laravel-locksmith",
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^9.0|^10.0|^11.0|^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "BrainletAli\\Locksmith\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BrainletAli\\Locksmith\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BrainletAli\\Locksmith\\LocksmithServiceProvider"
+            ],
+            "aliases": {
+                "Locksmith": "BrainletAli\\Locksmith\\Facades\\Locksmith"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "suggest": {
+        "aws/aws-sdk-php": "Required for AWS IAM key rotation recipe (^3.0)"
+    },
+    "require-dev": {
+        "aws/aws-sdk-php": "^3.0",
+        "laravel/pint": "^1.13",
+        "orchestra/testbench": "^7.0|^8.0|^9.0|^10.0",
+        "phpunit/phpunit": "^9.5|^10.5|^11.0",
+        "laravel/slack-notification-channel": "^3.0"
+    }
+}

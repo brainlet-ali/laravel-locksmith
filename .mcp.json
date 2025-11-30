@@ -1,0 +1,16 @@
+{
+    "mcpServers": {
+        "laravel-boost": {
+            "type": "stdio",
+            "command": "docker",
+            "args": [
+                "exec",
+                "-i",
+                "locksmith-test-claude-laravel.test-1",
+                "php",
+                "artisan",
+                "boost:mcp"
+            ]
+        }
+    }
+}
