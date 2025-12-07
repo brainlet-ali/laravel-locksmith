@@ -49,6 +49,7 @@ class InstallCommand extends Command
             ]);
             info('Migrations published to database/migrations');
             $this->call('migrate');
+            $this->callSilent('cache:clear');
         }
 
         $this->newLine();
